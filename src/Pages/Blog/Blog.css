@@ -8,7 +8,11 @@
     padding: 10px;
     gap: 10px;
 }
+.b-img {
+    min-height: 100%;
+    width: 100%;   
+}
 .b-img img{
+    width: 100%;
     min-height: 300px;
-    width: 300px !important
 }

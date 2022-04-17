@@ -6,9 +6,9 @@ import "./Blog.css";
 
 const Blog = () => {
   return (
-    <section className="blogs container my-5">
+    <section className="blogs container d-flex flex-column align-items-center justify-content-center my-5">
       <div className="blog d-flex align-items-center mb-5">
-        <div className="b-content shadow-lg">
+        <div className="b-content  shadow-lg">
           <h3>
             What is the difference between authorization and authentication?
           </h3>
@@ -19,7 +19,7 @@ const Blog = () => {
             based on the user's identity.
           </p>
         </div>
-        <div className="b-img">
+        <div className="b-img ">
           <img src={authimg} alt="" />
         </div>
       </div>
@@ -40,12 +40,12 @@ const Blog = () => {
             Couchbase. ... NativeScript. ... RxDB. ... Flutter. etc
           </p>
         </div>
-        <div className="b-img">
+        <div className="b-img ">
           <img src={firbase1} alt="" />
         </div>
       </div>
       <div className="blog d-flex mb-5">
-        <div className="b-content shadow-lg">
+        <div className="b-content  shadow-lg">
           <h3>
             What other services does firebase provide other than authentication?
           </h3>
@@ -55,7 +55,7 @@ const Blog = () => {
             Storage. Google Analytics. Predictions. Cloud Messaging.
           </p>
         </div>
-        <div className="b-img">
+        <div className="b-img ">
           <img src={parse} alt="" />
         </div>
       </div>
