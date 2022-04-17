@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import serviceInfo from "../../sinfo/serviceinfo";
+import "./Service.css";
 
 const Service = () => {
   const [services] = useState(serviceInfo);
@@ -7,7 +8,7 @@ const Service = () => {
   return (
     <section className="services">
       {/*-section title here */}
-      <div className="text-center">
+      <div className="text-center my-5">
         <h3>My Services</h3>
         <p className="w-50 mx-auto">
           Quverra tristique justo duis vitae diam neque nivamus aestan ateuene
@@ -16,25 +17,25 @@ const Service = () => {
       </div>
       {/* services items here */}
       <div className="container">
-        <div className="row g-3 shadow-lg s-wraper ">
+        <div className="s-wraper align-items-center ">
           {services.map((service, index) => {
             const { name, icon, des, price } = service;
             return (
               <div
                 key={index}
-                className="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 p-0  d-flex flex-column m-0 p-5  item"
+                className=" d-flex flex-column justify-content-center align-items-center roundeed shadow bg-light item  position-relative "
                 style={{ gap: "10px" }}
               >
                 {/* for price */}
                 <div>
-                  <span>${price}</span>
+                  <span className="text-info fs-1">${price}</span>
                 </div>
                 {/* for icon */}
                 <div>
                   <img
                     src={icon}
                     alt={name}
-                    className="img-fluid "
+                    className="img-fluid"
                     width="45px"
                   />
                 </div>
@@ -43,12 +44,14 @@ const Service = () => {
                   <h4>{name}</h4>
                 </div>
                 {/* for description */}
-                <div>
+                <div className="text-center">
                   <p>{des}</p>
                 </div>
                 {/* for booking button */}
-                <div>
-                  <button>Book Now</button>
+                <div className=" position-absolute w-100 shadow-lg  s-btn">
+                  <button className="w-100 py-5 text-info fs-3">
+                    Book Now
+                  </button>
                 </div>
               </div>
             );
