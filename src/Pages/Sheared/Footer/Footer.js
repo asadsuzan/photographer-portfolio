@@ -10,7 +10,7 @@ import { ImLocation2 } from "react-icons/im";
 const Footer = () => {
   return (
     <footer
-      className="footer container mt-5 bg-light shadow"
+      className="footer container mt-5 bg-light shadow-sm"
       style={{ minHeight: "300px" }}
     >
       <div className="row gy-3 align-items-center classnam">
@@ -51,16 +51,24 @@ const Footer = () => {
           </div>
           <div className="list-unstyled">
             <li>
-              <a href="#about">About</a>
+              <a href="#about" className="text-info">
+                About
+              </a>
             </li>
             <li>
-              <a href="#Services">Services</a>
+              <a href="#Services" className="text-info">
+                Services
+              </a>
             </li>
             <li>
-              <a href="#work">Work</a>
+              <a href="#work" className="text-info">
+                Work
+              </a>
             </li>
             <li>
-              <a href="#blog">Blog</a>
+              <a href="#blog" className="text-info">
+                Blog
+              </a>
             </li>
           </div>
         </div>
