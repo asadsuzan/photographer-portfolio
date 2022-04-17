@@ -1,0 +1,8 @@
+.thumb{
+    background-color: deepskyblue;
+    flex: 1;
+    height: 500px;
+}
+.info{
+    flex:2
+}

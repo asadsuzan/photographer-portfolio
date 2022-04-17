@@ -44,7 +44,10 @@ const Mywork = () => {
         {myWorks.map((work, id) => {
           const { title, img } = work;
           return (
-            <div className="col-lg-4 col-md-6  col-12 position-relative w-item overflow-hidden ">
+            <div
+              key={id}
+              className="col-lg-4 col-md-6  col-12 position-relative w-item overflow-hidden "
+            >
               {/* img here */}
               <div className="w-100">
                 <img src={img} alt={title} className="img-fluid w-img" />
