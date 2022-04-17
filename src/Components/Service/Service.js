@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import serviceInfo from "../../sinfo/serviceinfo";
 import "./Service.css";
 
 const Service = () => {
   const [services] = useState(serviceInfo);
+  const navigate = useNavigate();
 
   return (
     <section className="services">
@@ -49,7 +51,10 @@ const Service = () => {
                 </div>
                 {/* for booking button */}
                 <div className=" position-absolute w-100 shadow-lg  s-btn">
-                  <button className="w-100 py-5 text-info fs-3">
+                  <button
+                    onClick={() => navigate("/cheackout")}
+                    className="w-100 py-5 text-info fs-3"
+                  >
                     Book Now
                   </button>
                 </div>
