@@ -2,8 +2,9 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 
 import About from "./Pages/About/About";
-import Login from "./Pages/Authentication/Loging/Login";
+import Login from "./Pages/Authentication/Login/Login";
 import Signup from "./Pages/Authentication/Signup/Signup";
+
 import Blog from "./Pages/Blog/Blog";
 import Home from "./Pages/Home/Home";
 import Footer from "./Pages/Sheared/Footer/Footer";
