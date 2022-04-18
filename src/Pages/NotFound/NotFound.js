@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const NotFound = () => {
+  const navigate = useNavigate();
   return (
     <div className="container">
       <div
@@ -20,7 +22,10 @@ const NotFound = () => {
             </p>
           </div>
           <div>
-            <button className="btn btn-danger text-light text-uppercase">
+            <button
+              onClick={() => navigate("/")}
+              className="btn btn-danger text-light text-uppercase"
+            >
               Go back to homepage
             </button>
           </div>

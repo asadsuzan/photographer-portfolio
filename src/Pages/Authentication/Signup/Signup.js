@@ -91,7 +91,7 @@ const Signup = () => {
     navigate(from, { replace: true });
   }
   return (
-    <section className="container my-5 signup-form">
+    <section className="container my-5 signup-form" style={{ height: "100vh" }}>
       <div className="text-center my-5 fs-1 text-uppercase">signup</div>
       <FormBody action={handleSignUp}>
         <div>

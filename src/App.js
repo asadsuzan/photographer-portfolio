@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import WellcomeMsg from "./Components/WellcomeMsg/WellcomeMsg";
 
 import About from "./Pages/About/About";
 import Login from "./Pages/Authentication/Login/Login";
@@ -24,7 +25,8 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/signup" element={<Signup />}></Route>
         <Route path="/social" element={<Socialauth />}></Route>
-        <Route path="//reset_password" element={<Resetauth />}></Route>
+        <Route path="/reset_password" element={<Resetauth />}></Route>
+        <Route path="wellcome" element={<WellcomeMsg />}></Route>
         <Route
           path="/cheackout"
           element={
