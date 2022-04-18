@@ -29,8 +29,9 @@ const Socialauth = () => {
             <span>Google</span>
           </button>
         </div>
-        <div>
+        <div title="we are working on it">
           <button
+            disabled={true}
             type="button"
             className="d-flex fs-5  align-items-center justify-content-center  w-100 btn btn-danger"
             style={{ gap: "5px" }}

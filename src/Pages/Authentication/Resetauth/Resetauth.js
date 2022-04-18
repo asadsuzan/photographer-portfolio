@@ -2,6 +2,9 @@ import React, { useRef, useState } from "react";
 import { Spinner } from "react-bootstrap";
 import { useSendPasswordResetEmail } from "react-firebase-hooks/auth";
 import auth from "../../../firbaseConfig";
+import { ToastContainer, toast } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 
 const Resetauth = () => {
   const [confirm, setConfirm] = useState(false);
@@ -10,10 +13,16 @@ const Resetauth = () => {
   const [sendPasswordResetEmail, sending, error] =
     useSendPasswordResetEmail(auth);
 
-  const handleResetPass = (e) => {
+  const handleResetPass = async (e) => {
     e.preventDefault();
     const email = emailRef.current.value;
-    sendPasswordResetEmail(email);
+
+    await sendPasswordResetEmail(email);
+    if (error) {
+      toast(error.message);
+    } else {
+      toast("Email Sent");
+    }
   };
 
   if (sending) {
@@ -72,6 +81,7 @@ const Resetauth = () => {
           </div>
         </form>
       </div>
+      <ToastContainer />
     </div>
   );
 };
