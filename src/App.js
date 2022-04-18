@@ -3,6 +3,7 @@ import "./App.css";
 
 import About from "./Pages/About/About";
 import Login from "./Pages/Authentication/Login/Login";
+import Requreauth from "./Pages/Authentication/Requreauth/Requreauth";
 import Signup from "./Pages/Authentication/Signup/Signup";
 
 import Blog from "./Pages/Blog/Blog";
@@ -21,7 +22,14 @@ function App() {
         <Route path="/about" element={<About />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/signup" element={<Signup />}></Route>
-        <Route path="/cheackout" element={<Cheackout />}></Route>
+        <Route
+          path="/cheackout"
+          element={
+            <Requreauth>
+              <Cheackout />
+            </Requreauth>
+          }
+        ></Route>
       </Routes>
       <Footer></Footer>
     </>

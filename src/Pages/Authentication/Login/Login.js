@@ -1,12 +1,20 @@
 import React, { useState } from "react";
 import { Button, Spinner } from "react-bootstrap";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
-import { Link, useNavigate } from "react-router-dom";
+import {
+  useAuthState,
+  useSignInWithEmailAndPassword,
+} from "react-firebase-hooks/auth";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import FormBody from "../../../Components/FormBody/FormBody";
 import auth from "../../../firbaseConfig";
 
 const Login = () => {
   const navigate = useNavigate();
+  const [logdUser, loadUser] = useAuthState(auth);
+
+  let location = useLocation();
+
+  let from = location.state?.from?.pathname || "/";
 
   // crtae user initialize state
   const [signInWithEmailAndPassword, user, loading, error] =
@@ -40,7 +48,7 @@ const Login = () => {
     signInWithEmailAndPassword(email, password);
   };
   // dispplay spiner if loding
-  if (loading) {
+  if (loading || loadUser) {
     return (
       <div
         className="d-flex justify-content-center align-items-center w-100"
@@ -61,8 +69,8 @@ const Login = () => {
   }
   // navigate user to destination
 
-  if (user) {
-    navigate("/");
+  if (logdUser || user) {
+    navigate(from, { replace: true });
   }
   return (
     <section className="container">
