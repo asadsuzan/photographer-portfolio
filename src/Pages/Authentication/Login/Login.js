@@ -99,7 +99,13 @@ const Login = () => {
           <p>
             Don't have and Acount? <Link to={"/signup"}>SIGN UP</Link>
           </p>
-          <p>Forgot password?</p>
+          <p
+            className="text-primary"
+            onClick={() => navigate("/reset_password")}
+            style={{ cursor: "pointer" }}
+          >
+            Forgot password?
+          </p>
         </div>
 
         <div>

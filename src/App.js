@@ -4,6 +4,7 @@ import "./App.css";
 import About from "./Pages/About/About";
 import Login from "./Pages/Authentication/Login/Login";
 import Requreauth from "./Pages/Authentication/Requreauth/Requreauth";
+import Resetauth from "./Pages/Authentication/Resetauth/Resetauth";
 import Signup from "./Pages/Authentication/Signup/Signup";
 import Socialauth from "./Pages/Authentication/Socialauth/Socialauth";
 
@@ -24,6 +25,7 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/signup" element={<Signup />}></Route>
         <Route path="/social" element={<Socialauth />}></Route>
+        <Route path="//reset_password" element={<Resetauth />}></Route>
         <Route
           path="/cheackout"
           element={

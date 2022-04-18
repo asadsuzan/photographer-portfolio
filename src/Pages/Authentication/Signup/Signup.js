@@ -1,14 +1,22 @@
 import React, { useState } from "react";
 
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useAuthState,
+  useCreateUserWithEmailAndPassword,
+} from "react-firebase-hooks/auth";
 import { Button, Spinner } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import FormBody from "../../../Components/FormBody/FormBody";
 import auth from "../../../firbaseConfig";
 import Socialauth from "../Socialauth/Socialauth";
 
 const Signup = () => {
   const navigate = useNavigate();
+  const [logdUser, loadUser] = useAuthState(auth);
+
+  let location = useLocation();
+
+  let from = location.state?.from?.pathname || "/";
   // crtae user initialize state
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
@@ -76,8 +84,8 @@ const Signup = () => {
   }
   // navigate user to destination
 
-  if (user) {
-    navigate("/");
+  if (logdUser || user) {
+    navigate(from, { replace: true });
   }
   return (
     <section className="container my-5 signup-form">
