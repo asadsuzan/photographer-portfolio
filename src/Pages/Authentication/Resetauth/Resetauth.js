@@ -1,12 +1,9 @@
-import { Button } from "bootstrap";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { Spinner } from "react-bootstrap";
 import { useSendPasswordResetEmail } from "react-firebase-hooks/auth";
-import { useNavigate } from "react-router-dom";
 import auth from "../../../firbaseConfig";
 
 const Resetauth = () => {
-  const naviigate = useNavigate();
   const [confirm, setConfirm] = useState(false);
 
   const emailRef = useRef();
