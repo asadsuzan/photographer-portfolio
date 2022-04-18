@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import {
   useAuthState,
   useCreateUserWithEmailAndPassword,
+  useSendEmailVerification,
 } from "react-firebase-hooks/auth";
 import { Button, Spinner } from "react-bootstrap";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -12,14 +13,15 @@ import Socialauth from "../Socialauth/Socialauth";
 
 const Signup = () => {
   const navigate = useNavigate();
-  const [logdUser, loadUser] = useAuthState(auth);
+  const [logdUser] = useAuthState(auth);
+  const [sendEmailVerification] = useSendEmailVerification(auth);
 
   let location = useLocation();
 
   let from = location.state?.from?.pathname || "/";
   // crtae user initialize state
   const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
   // validation initialize state
   const [validate, setValidate] = useState({
@@ -30,7 +32,7 @@ const Signup = () => {
   });
 
   // handle sign up
-  const handleSignUp = (e) => {
+  const handleSignUp = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
     const email = e.target.email.value;
@@ -60,6 +62,7 @@ const Signup = () => {
     // creat user
     setValidate({});
     createUserWithEmailAndPassword(email, password);
+    await sendEmailVerification(email);
   };
 
   // dispplay spiner if loding

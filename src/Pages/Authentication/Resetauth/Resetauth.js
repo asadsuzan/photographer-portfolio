@@ -1,9 +1,14 @@
-import React, { useRef, useState } from "react";
+import { Button } from "bootstrap";
+import React, { useEffect, useRef, useState } from "react";
+import { Spinner } from "react-bootstrap";
 import { useSendPasswordResetEmail } from "react-firebase-hooks/auth";
+import { useNavigate } from "react-router-dom";
 import auth from "../../../firbaseConfig";
 
 const Resetauth = () => {
+  const naviigate = useNavigate();
   const [confirm, setConfirm] = useState(false);
+
   const emailRef = useRef();
   const [sendPasswordResetEmail, sending, error] =
     useSendPasswordResetEmail(auth);
@@ -13,9 +18,25 @@ const Resetauth = () => {
     const email = emailRef.current.value;
     sendPasswordResetEmail(email);
   };
-  if (error) {
-    console.log(error.message);
+
+  if (sending) {
+    return (
+      <p
+        className="d-flex justify-content-center align-items-center w-100"
+        style={{ height: "100vh" }}
+      >
+        <Spinner
+          as="span"
+          animation="grow"
+          size=""
+          role="status"
+          aria-hidden="true"
+        />
+        Seding
+      </p>
+    );
   }
+
   return (
     <div className="container">
       <div
