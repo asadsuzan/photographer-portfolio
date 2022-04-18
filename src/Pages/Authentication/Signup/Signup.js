@@ -5,6 +5,7 @@ import { Button, Spinner } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import FormBody from "../../../Components/FormBody/FormBody";
 import auth from "../../../firbaseConfig";
+import Socialauth from "../Socialauth/Socialauth";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -135,6 +136,7 @@ const Signup = () => {
             className="form-control bg-danger text-white py-2"
           />
         </div>
+        <Socialauth />
       </FormBody>
     </section>
   );

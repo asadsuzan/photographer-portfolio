@@ -7,6 +7,7 @@ import {
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import FormBody from "../../../Components/FormBody/FormBody";
 import auth from "../../../firbaseConfig";
+import Socialauth from "../Socialauth/Socialauth";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -109,6 +110,7 @@ const Login = () => {
             className="form-control bg-danger text-white py-2"
           />
         </div>
+        <Socialauth />
       </FormBody>
     </section>
   );
