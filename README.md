@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# LEGEND STUDIO
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### LIVE LINK
 
-## Available Scripts
+# [LEGEND](https://legend-studio-6bd86.firebaseapp.com/)
 
-In the project directory, you can run:
+### This website is made with REACT
 
-### `npm start`
+# Used Technologies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- ### React App
+- ### React Router
+- ### Firbase Hosting
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Used Libraries
 
-### `npm test`
+- ### React Bootstrap
+- ### React Icons
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Autentication
 
-### `npm run build`
+- ### Firbase
+- ### Firbase Hooks
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## The Requrements were
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Task Description:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+We are looking for a web developer who can build websites for an Independent Service Provider. You must be familiar with `React`, `firebase`, `react router`, etc.
 
-### `npm run eject`
+Here is the task that you need to do.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Task Detail:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. A website for an individual who provides services. It could be a website for a gym trainer, Tourist/Travel guide, Lawyer, Photographer (wedding photographer, sports photographer, journalism photographer, wild photographer, etc.), Immigration & VISA Consultant, Accountant, Doctor/Dentist (single doctor. not a hospital or a diagnostic center), Tutor, Career Coach, Corporate Sales Trainer, Independent TV Host, Independent Consultant, Model, Actor, Writer, matchmaker, realtor, broker, Journalist, youtuber, home food catering, etc. Please note that you will select one of the options mentioned above. It has to be a person providing services, not an organization or person working in an organization. If you have another idea for an individual service provider, please let us know before proceeding. (Please note that your website can not be related to a marketplace freelancer working on: fiver, upwork, etc. It can not be a portfolio website)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Make sure your design and website idea is unique. First, finalize your idea (What type of website do you want to build). Then google the site design or visit ThemeForest to get your website idea. However, your website can not be related to your previous assignments or any demo project displayed in the course or in our conceptual sessions.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+3. Give your website a name. The name should appear on the website and be displayed on the website's title.
+4. Home page will have a header (simple navbar), banner, services section, and a footer. The banner could be static or a carousel. Either one will be alright.
+5. Add One extra section on the home page in addition to the 4 sections (header, banner, services, and footer) mentioned above.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+6. The Services section will have at least 3 services. You can put one, two, or more services in a row based on your design. Each service should have a relevant name, price, image, short description, and a specific button.
 
-### Code Splitting
+7. Clicking on the button will take the user to the Checkout route. This route will be private/protected routes. Please make sure that the private route redirects to the login page if the user is not logged in. After login, the user will be redirected to the checkout page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+8. You can put anything on the checkout page. If you want to do some extra optional work, please read the optional but highly recommended section of this description.
 
-### Analyzing the Bundle Size
+9. If you reload the protected/private route (after login), this page will not redirect the user to the login page. Instead, it will keep the logged-in user on the protected route.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+10. You Must implement Email-password based authentication. You will have to implement the Registration and the login page. Users should be able to toggle between Login and Registration view. You can use `react firebase hook` to implement the login system. And don't forget to make the Email and password field a required field.
+11. Also, implement at least one extra login, which could be (facebook, github, google, etc).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+12. Once logged in, the log out/sign out button should appear on the header, which will log out the user once clicked.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+13. Add two more routes. one route will be `blogs`. On the blog page, you will need to answer these three questions. This won't be a protected route
 
-### Deployment
+    13.1 Difference between `authorization` and `authentication`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+    13.2 Why are you using `firebase`? What other options do you have to implement authentication?
 
-### `npm run build` fails to minify
+    13.3 What other services does `firebase` provide other than authentication
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+14. You will create an about me page. It could be the `about` route. There will put your name and your image (picture is optional. However, if you put a photo, please put a professional look picture). And write a small paragraph (3-5 lines) about your goal. And how you will work hard to achieve your goal.
+
+---
+
+15. Create a 404 page (not found page)
