@@ -26,7 +26,7 @@
 
 # Task Description:
 
-We are looking for a web developer who can build websites for an Independent Service Provider. You must be familiar with `React`, `firebase`, `react router`, etc.
+We'r looking for a web developer who can build websites for an Independent Service Provider. You must be familiar with `React`, `firebase`, `react router`, etc.
 
 Here is the task that you need to do.
 
